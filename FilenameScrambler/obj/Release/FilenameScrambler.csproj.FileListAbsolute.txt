@@ -4,3 +4,4 @@ C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\File
 C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.pdb
 C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.exe
 C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.pdb
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.csprojAssemblyReference.cache
