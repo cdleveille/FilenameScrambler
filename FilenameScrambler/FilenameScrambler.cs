@@ -31,6 +31,8 @@ namespace FilenameScrambler
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+                Console.ReadLine();
+                Environment.Exit(1);
             }
         }
 
@@ -52,9 +54,9 @@ namespace FilenameScrambler
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -80,9 +82,9 @@ namespace FilenameScrambler
 
                 return toReturn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
 
@@ -157,9 +159,9 @@ namespace FilenameScrambler
 
                 return toReturn;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                throw;
             }
         }
     }
