@@ -4,12 +4,14 @@ using System.IO;
 
 namespace FilenameScrambler
 {
-    class Program
+    class FilenameScrambler
     {
         static void Main(string[] args)
         {
             try
             {
+                PasswordPrompt();
+
                 string path = System.IO.Directory.GetCurrentDirectory();
                 DirectoryInfo dir = new DirectoryInfo(path);
                 FileInfo[] files = dir.GetFiles();
@@ -18,11 +20,10 @@ namespace FilenameScrambler
                 {
                     if (file.Extension != ".exe")
                     {
-                        string filename = file.Name;
-                        string newFilename = Scramble(filename);
+                        string newFilename = Scramble(file.Name);
 
                         File.Delete(path + "\\" + newFilename);
-                        File.Move(path + "\\" + filename, path + "\\" + newFilename);
+                        File.Move(path + "\\" + file.Name, path + "\\" + newFilename);
                     }
 
                 }
@@ -30,6 +31,23 @@ namespace FilenameScrambler
             catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private static void PasswordPrompt()
+        {
+            bool locked = true;
+            while (locked)
+            {
+                Console.Write("password: ");
+                if (Console.ReadLine() == "asdf")
+                {
+                    locked = false;
+                }
+                else
+                {
+                    Console.WriteLine("incorrect!");
+                }
             }
         }
 
