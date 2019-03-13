@@ -30,7 +30,6 @@ namespace FilenameScrambler
 
                         SwapBytes(newPath);
                     }
-
                 }
             }
             catch (Exception ex)
