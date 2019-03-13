@@ -12,18 +12,23 @@ namespace FilenameScrambler
             {
                 PasswordPrompt();
 
+                Dictionary<char, char> charLookup = CreateCharLookup();
                 string path = System.IO.Directory.GetCurrentDirectory();
                 DirectoryInfo dir = new DirectoryInfo(path);
                 FileInfo[] files = dir.GetFiles();
 
                 foreach (FileInfo file in files)
                 {
-                    if (file.Extension != ".exe")
+                    if (file.Extension != ".exe" && file.Extension != ".pdb")
                     {
-                        string newFilename = Scramble(file.Name);
+                        string newFilename = Scramble(file.Name, charLookup);
+                        string newPath = path + "\\" + newFilename;
 
-                        File.Delete(path + "\\" + newFilename);
-                        File.Move(path + "\\" + file.Name, path + "\\" + newFilename);
+                        // make sure a file with the new name does not already exist before renaming
+                        File.Delete(newPath);
+                        File.Move(path + "\\" + file.Name, newPath);
+
+                        SwapBytes(newPath);
                     }
 
                 }
@@ -60,12 +65,11 @@ namespace FilenameScrambler
             }
         }
 
-        private static string Scramble(string filename)
+        private static string Scramble(string filename, Dictionary<char, char> charLookup)
         {
             try
             {
                 string toReturn = "";
-                Dictionary<char, char> charLookup = CreateCharLookup();
                 char[] filenameChar = filename.ToCharArray();
 
                 foreach (char c in filenameChar)
@@ -158,6 +162,30 @@ namespace FilenameScrambler
                 toReturn.Add('0', '5');
 
                 return toReturn;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private static void SwapBytes(string path)
+        {
+            try
+            {
+                // break down the file into a list of bytes
+                byte[] bytes = File.ReadAllBytes(path);
+                byte tempByte;
+
+                // swap each byte with its immediate neighbor
+                for (int i = 0; i < bytes.Length - 1; i += 2)
+                {
+                    tempByte = bytes[i];
+                    bytes[i] = bytes[i + 1];
+                    bytes[i + 1] = tempByte;
+                }
+
+                File.WriteAllBytes(path, bytes);
             }
             catch (Exception)
             {

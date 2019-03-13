@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/FilenameScrambler/v15
+/FilenameScrambler/obj/Release/FilenameScrambler.csprojAssemblyReference.cache
