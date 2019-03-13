@@ -1,7 +1,7 @@
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Debug\FilenameScrambler.exe.config
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Debug\FilenameScrambler.exe
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Debug\FilenameScrambler.pdb
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.csprojAssemblyReference.cache
 c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.csproj.CoreCompileInputs.cache
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.exe
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.pdb
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Debug\FilenameScrambler.exe.config
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Debug\FilenameScrambler.exe
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Debug\FilenameScrambler.pdb
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.exe
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.pdb
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Debug\FilenameScrambler.csprojAssemblyReference.cache

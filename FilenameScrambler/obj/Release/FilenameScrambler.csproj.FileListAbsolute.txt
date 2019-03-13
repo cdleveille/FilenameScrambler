@@ -1,6 +1,6 @@
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.exe.config
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.exe
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.pdb
 c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.csproj.CoreCompileInputs.cache
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.exe
-c:\users\chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.pdb
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.exe.config
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.exe
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\bin\Release\FilenameScrambler.pdb
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.exe
+C:\Users\Chris\source\repos\FilenameScrambler\FilenameScrambler\obj\Release\FilenameScrambler.pdb
