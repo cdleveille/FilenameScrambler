@@ -3,9 +3,7 @@
 ################################################################################
 
 /.vs/FilenameScrambler/v15
-/FilenameScrambler/obj/Release/FilenameScrambler.csprojAssemblyReference.cache
-/FilenameScrambler/obj/Debug/FilenameScrambler.csprojAssemblyReference.cache
-/FilenameScrambler/bin/Debug/FilenameScrambler.pdb
-/FilenameScrambler/obj/Debug/FilenameScrambler.pdb
+/FilenameScrambler/bin/Debug
 /FilenameScrambler/bin/Release/FilenameScrambler.pdb
-/FilenameScrambler/obj/Release/FilenameScrambler.pdb
+/FilenameScrambler/obj/Debug
+/FilenameScrambler/obj/Release

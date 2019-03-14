@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace FilenameScrambler
@@ -17,6 +18,9 @@ namespace FilenameScrambler
                 DirectoryInfo dir = new DirectoryInfo(path);
                 FileInfo[] files = dir.GetFiles();
 
+                TimeSpan start = DateTime.Now.TimeOfDay;
+                Console.WriteLine("Processing...");
+
                 foreach (FileInfo file in files)
                 {
                     if (file.Extension != ".exe" && file.Extension != ".pdb")
@@ -31,6 +35,9 @@ namespace FilenameScrambler
                         SwapBytes(newPath);
                     }
                 }
+
+                Console.WriteLine("Done. Runtime: " + DateTime.Now.TimeOfDay.Subtract(start));
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
@@ -176,7 +183,7 @@ namespace FilenameScrambler
                 byte[] bytes = File.ReadAllBytes(path);
                 byte tempByte;
 
-                // swap each byte with its immediate neighbor
+                // swap each byte with the next byte in the list
                 for (int i = 0; i < bytes.Length - 1; i += 2)
                 {
                     tempByte = bytes[i];
