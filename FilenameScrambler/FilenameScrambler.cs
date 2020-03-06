@@ -23,9 +23,10 @@ namespace FilenameScrambler
 
                 foreach (FileInfo file in files)
                 {
-                    if (file.Extension != ".exe" && file.Extension != ".pdb")
+                    if (file.Extension != ".exe" && file.Extension != ".pdb" && file.Extension != ".config")
                     {
                         string newFilename = Scramble(file.Name, charLookup);
+                        //string newFilename = SwapCharacters(file.Name);
                         string newPath = path + "\\" + newFilename;
 
                         // make sure a file with the new name does not already exist before renaming
@@ -37,6 +38,7 @@ namespace FilenameScrambler
                 }
 
                 Console.WriteLine("Done. Runtime: " + DateTime.Now.TimeOfDay.Subtract(start));
+                Console.WriteLine("Press ENTER to exit...");
                 Console.ReadLine();
             }
             catch (Exception ex)
@@ -166,6 +168,33 @@ namespace FilenameScrambler
                 toReturn.Add('8', '3');
                 toReturn.Add('9', '4');
                 toReturn.Add('0', '5');
+
+                return toReturn;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private static string SwapCharacters(string filename)
+        {
+            try
+            {
+                string toReturn = "";
+                char[] filenameChar = filename.ToCharArray();
+
+                for (int i = 0; i < filenameChar.Length - 1; i += 2)
+                {
+                    if (filenameChar[i] != '.' && filenameChar[i + 1] != '.')
+                    {
+                        toReturn += filenameChar[i + 1].ToString() + filenameChar[i].ToString();
+                    }
+                    else
+                    {
+                        toReturn += filenameChar[i].ToString() + filenameChar[i + 1].ToString();
+                    }
+                }
 
                 return toReturn;
             }
